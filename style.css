@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+:root {
+  --bg: #1f1f1f;
+  --primary: #f2f2f2;
+  --accent: #9b9b9b;
+  --card-bg: #181818;
+  --card-border: #2e2e2e;
+  --highlight: #f79d2a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Press Start 2P", monospace;
+  background: var(--bg);
+  color: var(--primary);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 32px;
+  padding: 48px 24px;
+}
+
+.banner {
+  text-align: center;
+  display: grid;
+  gap: 12px;
+}
+
+.logo {
+  letter-spacing: 6px;
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  color: var(--primary);
+}
+
+.tagline {
+  font-size: 0.7rem;
+  color: var(--highlight);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 14px;
+  width: min(840px, 100%);
+  margin: 0 auto;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 6px;
+  padding: 12px;
+  background: var(--card-bg);
+  border: 2px solid var(--card-border);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 150ms ease, transform 150ms ease;
+  align-items: center;
+  justify-items: center;
+}
+
+.card:hover,
+.card:focus-visible {
+  border-color: var(--highlight);
+  transform: translateY(-4px);
+  outline: none;
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 6px rgba(247, 157, 42, 0.35));
+}
+
+.card-title {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+}
+
+.credits {
+  text-align: center;
+  font-size: 0.55rem;
+  color: var(--accent);
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.credits a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.credits a:hover,
+.credits a:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
